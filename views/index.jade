@@ -2,12 +2,12 @@ extends layout
 
 mixin button(title, location, color)
     a(href=location)
-        button(style="background:#{color}") #{title}
+        button(style="background:##{color}") #{title}
 
 block content
-    img(src='images/james.gif')
     #content-wrapper
+        img(src='images/james.gif')
         h1 James Kolsby
         each link in links
             +button(link.title, link.location, link.color)
-        a or view my CV...
+        a#cv or view my CV...
