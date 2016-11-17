@@ -1,4 +1,13 @@
 extends layout
 
+mixin button(title, location, color)
+    a(href=location)
+        button(style="background:#{color}") #{title}
+
 block content
-  h1 James Kolsby
+    img(src='images/james.gif')
+    #content-wrapper
+        h1 James Kolsby
+        each link in links
+            +button(link.title, link.location, link.color)
+        a or view my CV...
