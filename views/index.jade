@@ -7,7 +7,8 @@ mixin button(title, location, color)
 block content
     #content-wrapper
         img(src='images/james.gif')
-        h1 James Kolsby
-        each link in links
-            +button(link.title, link.location, link.color)
-        a#cv or view my CV...
+        #text-wrapper
+            h1 James Kolsby
+            each link in links
+                +button(link.title, link.location, link.color)
+            a#cv or check out my CV...
