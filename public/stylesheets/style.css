@@ -62,6 +62,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    opacity: 0.8;
+}
+
 a#cv {
     font-family: 'Georgia', 'Times', serif;
     font-weight: 300;
@@ -73,6 +77,10 @@ a#cv {
     top: -6px;
 
     cursor: pointer;
+}
+
+a#cv:hover {
+    opacity: 0.6;
 }
 
 img {
