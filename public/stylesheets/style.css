@@ -9,6 +9,8 @@
 	text-align: center;
 	width: 100%;
 
+    margin-left: -50px;
+
     padding: 20px;
 }
 
@@ -38,10 +40,12 @@ h1 {
     font-size: 3em;
     line-height: 0.95;
 
+    color: #2d2d2d;
+
     margin-bottom: 30px;
 }
 
-a { text-decoration: none }
+a { text-decoration: inherit; color: inherit }
 
 button {
     width: 160px;
@@ -72,6 +76,8 @@ a#cv {
     text-decoration: underline;
 
     cursor: pointer;
+
+    color: #2d2d2d;
 }
 
 a#cv:hover { opacity: 0.6 }
@@ -83,25 +89,34 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-	img { width: 250px; height: auto; }
-}
-
-@media screen and (max-height: 600px) {
-    img {
-        height: 100px;
-        width: auto;
-        margin-bottom: -20px;
-    }
-
-    img,
+	img,
     #text-wrapper {
         display: block;
     }
-
-    h1 {
-        font-size: 2em;
-        text-align: center;
-        margin-bottom: 20px;
+    
+    img {
+        display: block;
+        width: auto;
+        height: 200px;
     }
 
+    #content-wrapper {
+        margin-left: 0;
+        margin-top: -30px;
+    }
+
+    @media screen and (max-height: 600px) {
+        img {
+            height: 100px;
+            width: auto;
+            margin-top: -20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
 }
+
