@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
 @import url('html5.css');
-
 
 #content-wrapper {
     position: absolute;
@@ -9,6 +8,8 @@
     transform: translate(-50%, -50%);
 	text-align: center;
 	width: 100%;
+
+    padding: 20px;
 }
 
 img,
@@ -21,6 +22,9 @@ img,
 	display: inline-block;
 	overflow: auto;
 
+    max-width: 100%;
+    width: 160px;
+
 	text-align: left;
 
 	margin: 0 auto;
@@ -31,16 +35,14 @@ img,
 
 h1 {
     font-family: 'Inconsolata', monospace;
+    font-weight: 700;
     font-size: 3em;
     line-height: 0.95;
-    max-width: 180px;
 
     margin-bottom: 30px;
 }
 
-a { 
-    text-decoration: none;
-}
+a { text-decoration: none }
 
 button {
     width: 160px;
@@ -62,9 +64,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    opacity: 0.8;
-}
+button:hover { opacity: 0.8 }
 
 a#cv {
     font-family: 'Georgia', 'Times', serif;
@@ -79,16 +79,29 @@ a#cv {
     cursor: pointer;
 }
 
-a#cv:hover {
-    opacity: 0.6;
-}
+a#cv:hover { opacity: 0.6 }
 
 img {
+    max-width: 100%;;
     width: 400px;
+    height: auto;
 }
 
 @media screen and (max-width: 600px) {
-	img {
-		width: 250px;
-	}
+	img { width: 250px; height: auto; }
+}
+
+@media screen and (max-height: 600px) {
+    img {
+        height: 200px;
+        width: auto;
+        margin-bottom: -20px;
+    }
+
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
 }
